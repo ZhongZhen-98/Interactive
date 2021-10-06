@@ -2,11 +2,6 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Ex1 three.js app</title>
-		<style>
-			body { margin: 0; }
-			canvas { display: block; }
-		</style>
 	</head>
 	<body>
 		<script src="../../js/three.js"></script>
@@ -19,9 +14,12 @@
 			document.body.appendChild( renderer.domElement );
 
 			const geometry = new THREE.BoxGeometry();
-			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			const material = new THREE.MeshNormalMaterial();
 			const cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
+
+			ambientLight = new THREE.AmbientLight();
+      scene.add(ambientLight);
 
 			camera.position.z = 5;
 
