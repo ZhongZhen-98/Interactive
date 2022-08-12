@@ -31,7 +31,7 @@ class App {
         };
         
         this.image = new Image();
-        this.image.src ='photo.jpg';
+        this.image.src ='jongjin.jpg';
         
         this.image.onload = () => {
             this.isLoaded = true;
